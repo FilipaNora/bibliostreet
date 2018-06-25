@@ -1,74 +1,3 @@
-console.log(localStorage.getItem("users"))
-let users = []
-let userId = 0
-
-class User {
-
-    constructor(name, email, password, type) {
-        this._id = User.getLastId() + 1
-        this.name = name
-        this.email = email
-        this.password = password
-        this.type = type
-    }
-
-    // Propriedade ID
-    get id() {
-        return this._id
-    }
-
-    // Propriedade NAME
-    get name() {
-        return this._name
-    }
-
-    set name(newName) {
-        this._name = newName
-    }
-
-    // Propriedade EMAIL
-    get email() {
-        return this._email
-    }
-
-    set email(newEmail) {
-        this._email = newEmail
-    }
-
-    // Propriedade PASSWORD
-    get password() {
-        return this._password
-    }
-
-    set password(newPassoword) {
-        this._password = newPassoword
-    }
-
-    // Propriedade TIPO USER
-    get type() {
-        return this._type
-    }
-
-    set type(newType) {
-        this._type = newType
-    }
-
-    static getLastId() {
-        let lastId = 0
-        if (users.length != 0) {
-            lastId = users[users.length - 1].id
-        }
-        return lastId
-    }
-
-}
-
-//////////////////////////////////
-//////////////////////////////////
-//        UTILIZADORES
-//////////////////////////////////
-//////////////////////////////////
-
 window.onload = function () {
 
     if (localStorage.getItem("users") != null) {
@@ -89,12 +18,14 @@ window.onload = function () {
     // Referência para elementos HTML
     let optLogin = document.getElementById("optLogin")
 
-    // Injetar utilizadores e viagens via código
+    // Injetar users e viagens via código
     if (users.length == 0) {
         let user01 = new User("ric", "ric@mail.pt", 12345, 0)
         users.push(user01);
         let user02 = new User("Maria", "maria@mail.pt", 54321, 1)
         users.push(user02);
+        let user03 = new User("Ana", "ana@mail.pt", 54321, 2)
+        users.push(user03);
     }
 
 
@@ -138,12 +69,13 @@ window.onload = function () {
             alert("Autenticação efetuado com sucesso!!")
             // Fechar a modal
             $('#login-modal').modal('hide')
-            if (userType == 0) {
-                window.location.replace("admin.html");
+            if (userType == 2) {
+                window.location.replace("uti.html");
+
             } else
             if (userType == 1) {
                 window.location.replace("operador.html");
-            } else if (userType == 2) {
+            } else if (userType == 0) {
                 window.location.replace("admin.html");
             }
 
@@ -186,7 +118,7 @@ window.onload = function () {
         // 3. Criar o utilizador
         if (strError == "") {
             let inputName = document.getElementById("inputName")
-            let newUser = new User(inputName.value, inputEmail.value, inputPassword1.value)
+            let newUser = new User(inputName.value, inputEmail.value, inputPassword1.value, 2)
             // 4. Adicionar ao array
             users.push(newUser)
             userId = newUser.id
@@ -197,7 +129,8 @@ window.onload = function () {
             // 6. Fechar a modal
             $('#registoModal').modal('hide')
             $('#login-modal').modal('hide')
-        
+
+            window.location.replace("admin.html");
 
         } else {
             alert(strError)
@@ -206,5 +139,4 @@ window.onload = function () {
         }
         event.preventDefault()
     })
-
 }

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--Invoca a estilização em css-->
@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="css/index.css">
 
     <!--Custom JS-->
+    <script src="js/main.js"></script>
     <script src="js/logout.js"></script>
+    <script src="js/confcategorias.js"></script>
 
 </head>
 
@@ -74,18 +76,19 @@
 
     <div class="container text-center">
         <div class="row content">
-            <div class="col-sm-12 text-left">
+            <div class="col-sm-12 text-left" id="cat">
                 <h2>Categorias de livros</h2>
-                <form action="/action_page.php" id="formbiblio">
-                    <label for="fcod">Código da categoria</label>
-                    <input type="number" id="fcod">
-                    <input type="text" id="fcat" placeholder="Descrição da categoria">
+                <form id="formcat">
+                    <input type="text" id="fcat" placeholder="Descrição da categoria" required>
                     <br>
                     <br>
-                    <button type="submit">Configurar</button>
+                    <button type="submit" id="fbutCat">Adicionar</button>
                     <br>
                     <br>
                 </form>
+                <div id="divCat">
+
+                </div>
             </div>
         </div>
     </div>

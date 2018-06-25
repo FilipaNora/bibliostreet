@@ -16,12 +16,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--Invoca a estilização em css-->
-    <link rel="stylesheet" href="css/log.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!--Custom JS-->
-    <script src="js/logout.js"></script>
-    <script src="js/livros.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/doar.js"></script>
 
 
@@ -62,16 +61,16 @@
             <div class="col-sm-12 text-left">
                 <h2>Doar</h2>
                 <form id="formdoar"  >
-                    <input type="text" id="fnome" placeholder="Título do livro">
+                    <input type="text" id="fnome" maxlength="50" placeholder="Título do livro">
                     <br>
                     <br>
-                    <input type="url" id="fcapa" placeholder="Link da capa">
+                    <input type="url" id="fcapa" maxlength="5000" placeholder="Link da capa">
                     <br>
                     <br>
-                    <textarea rows="4" cols="25" id="fdescricao" placeholder="Descrição"></textarea>
+                    <textarea rows="4" cols="25" maxlength="5000" id="fdescricao" placeholder="Descrição"></textarea>
                     <br>
                     <br>
-                    <input type="text" id="fautores" placeholder="Autores">
+                    <input type="text" id="fautores" maxlength="50" placeholder="Autores">
                     <br>
                     <br>
                     <label for="fdata">Data de Lançamento</label>
@@ -80,29 +79,20 @@
                     <br>
                     <select id="fgenero" name="genero">
                         <option value="">Género</option>
-                        <option value="Romance">Romance</option>
-                        <option value="Drama">Drama</option>
-                        <option value="Infantil">Infantil</option>
-                        <option value="Poesia">Poesia</option>
-                        <option value="Historia">História</option>
-                        <option value="Terror">Terror</option>
-                        <option value="Ficcao">Ficção</option>
-                        <option value="Cientificos">Científico</option>
-                        <option value="Policial">Policial</option>
                     </select>
                     <br>
                     <br>
-                    <input type="text" id="ftag" placeholder="Tags">
+                   <input type="text" id="ftag" maxlength="50" placeholder="Tag">
                     <br>
                     <br>
-                    <input type="text" id="feditora" placeholder="Editora">
+                    <input type="text" id="feditora" maxlength="50" placeholder="Editora">
                     <br>
                     <br>
                     <label for="fpaginas">Nº de Páginas</label>
                     <input type="number" id="fpaginas">
                     <br>
                     <br>
-                    <select id="festado" name="genero">
+                    <select id="festado">
                         <option value="">Estado</option>
                         <option value="Bom">Bom</option>
                         <option value="Aceitavel">Aceitável</option>
@@ -110,18 +100,20 @@
                     </select>
                     <br>
                     <br>
-                    <input type="text" id="fnomedoador" placeholder="Nome do doador">
+                    <input type="text" id="fnomedoador" maxlength="50" placeholder="Nome do doador">
                     <br>
                     <br>
                     <label for="fdataDoacao">Data de doação</label>
                     <input type="date" id="fdataDoacao" max="2018-12-31">
                     <br>
                     <br>
-                    <label for="fcodigo">Código da Biblioteca</label>
-                    <input type="number" id="fcodigo">
+                    <label>Biblioteca</label>
+                    <select id="fcodigo" >
+                        <option value="">Biblioteca</option>
+                    </select>
                     <br>
                     <br>
-                    <button type="submit">Doar</button>
+                    <button id="fbutSubmit">Doar</button>
                     <br>
                     <br>
                 </form>

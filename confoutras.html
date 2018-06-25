@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--Invoca a estilização em css-->
@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="css/index.css">
 
     <!--Custom JS-->
+    <script src="js/main.js"></script>
     <script src="js/logout.js"></script>
+    <script src="js/confoutras.js"></script>
 
 </head>
 
@@ -76,20 +78,20 @@
         <div class="row content">
             <div class="col-sm-12 text-left">
                 <h2>Outras configurações</h2>
-                <form action="/action_page.php" id="formbiblio">
-                    <label for="fpaginas">Código da biblioteca</label>
-                    <input type="number" id="fpaginas">
-                    <input type="text" id="ffreguesia" placeholder="Freguesia da biblioteca">
+                <form id="formbiblio">
+                    <label for="fpaginas">Nº de dias de requisição</label>
+                    <input type="number" id="fdias">
                     <br>
                     <br>
-                    <input type="text" id="fmorada" placeholder="Morada da biblioteca">
+                    <label for="fpaginas">Valor multa</label>
+                    <input type="number" id="fmulta">
                     <br>
                     <br>
-                    <label for="fpaginas">Capacidade de livros que a biblioteca pode ter</label>
-                    <input type="number" id="fpaginas">
+                    <label for="fpaginas">Limite de multa</label>
+                    <input type="number" id="flimite">
                     <br>
                     <br>
-                    <button type="submit">Configurar</button>
+                    <button type="submit" id="fbutOutras">Configurar</button>
                     <br>
                     <br>
                 </form>

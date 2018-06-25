@@ -20,9 +20,8 @@
     <link rel="stylesheet" href="css/index.css">
 
     <!--Custom JS-->
-    <script src="js/doar.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/requisitar.js"></script>
 
 
 </head>
@@ -36,15 +35,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button><img width="150" height="42" src="img/learning.png" alt="">
+                </button>
+                <img width="150" height="42" src="img/learning.png" alt="">
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="#">Livros</a>
-                    </li>
-                    <li>
-                        <a href="doar.html">Doar</a>
+                        <a href="uti.html">Livros</a>
                     </li>
                     <!--OPÇÃO LOGOUT-->
                     <li id="optLogout" class="nav-item">
@@ -56,38 +53,33 @@
     </nav>
 
     <div class="container">
+        <div  class="col-sm-12" style="margin-top: 3%">
+            <div id="requesitarLivro">
 
-        <div class="row content">
-            <div class="col-sm-12 text-left">
-                <h2>Livros</h2>
             </div>
-            <div class="col-sm-10 text-left">
-                <select id="fgenero">
-                </select>
-                <select id="fcodigo">
-                </select>
-                <br>
-                <br>
-                <button id="fbutFiltrar"> Filtrar </button>
-                <br><br>
+           
+            <div hidden id="comentarios" class="col-sm-12" style="margin-top: 1%; display: none">
+                <h4>
+                    <b>COMENTÁRIOS</b>
+                </h4>
+                <textarea name="comentário" id="comentario" cols="20" rows="5" placeholder="comentário"></textarea>
+                <button id="comentar" onclick="Comentar()"> Comentar </button>
+                <button id="pontuar" onclick="Pontuar()"> Pontuar </button>
             </div>
-
-            <div class="col-sm-2 text-left">
-                <select id="ordenar">
-                    <option value="">Ordenar</option>
-                    <option value="A-Z" >A-Z</option>
-                </select>
-                <button id="fbutOrdenar">Ordenar</button>
-                <br>    
-                <br>                   
-            </div>
-            <br>
-            <div class="col-sm-12 text-left">
-                <div id="tblLivro">
-                </div>
+            <div id="listcoment" class="col-sm-12" style="margin-top: 1%">
+                <!-- <div class="w3-panel w3-card">
+                    <p> and valuable first edition has been stolen. His life is a wreck. Amelia is a book rep, with a big heart,
+                        and a lonely life Maya is the baby who ends up on A.J.'s bookshop floor with a note. What happens
+                        in the bookshop that changes the lives of these seemingly normal but extraordinary characters? This
+                        is the story of how unexpected love can rescue you and bring you back to real life, in a world that
+                        you won't want to </p>
+                    <h6 class="text-right">
+                        <b>Ricardo Silva</b>
+                    </h6>
+                </div> -->
             </div>
         </div>
-
+    </div>
     </div>
 
 </body>

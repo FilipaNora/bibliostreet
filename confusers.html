@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!--Invoca a estilização em css-->
@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="css/index.css">
 
     <!--Custom JS-->
+    <script src="js/main.js"></script>
     <script src="js/logout.js"></script>
+    <script src="js/confusers.js"></script>
 
 </head>
 
@@ -76,8 +78,8 @@
         <div class="row content">
             <div class="col-sm-12 text-left">
                 <h2>Gestão de utilizadores</h2>
-                <form action="/action_page.php" id="formbiblio">
-                    <input type="text" id="fnome" placeholder="Nome de utilizador" maxlength="30">
+                <form id="formuser">
+                    <input type="text" id="fnome" placeholder="Nome de utilizador" maxlength="30" required>
                     <br>
                     <br>
                     <select id="festado" name="genero">
@@ -88,20 +90,27 @@
                     </select>
                     <br>
                     <br>
-                    <input type="email" id="femail" placeholder="email" maxlength="20">
+                    <input type="email" id="femail" placeholder="email" maxlength="20" required>
                     <br>
                     <br>
-                    <input minlength="5" maxlength="10" type="password" id="fpassword" placeholder="Password">
+                    <input minlength="5" maxlength="10" type="password" id="fpassword" placeholder="Password" required>
                     <br>
                     <br>
                     <label for="fmulta">Valor acumulado da multa</label>
                     <input type="number" id="fmulta" maxlength="4">
                     <br>
                     <br>
-                    <button type="submit">Configurar</button>
+                    <button type="submit" id="fbutuser">Adicionar</button>
                     <br>
                     <br>
                 </form>
+                <div id="divuser">
+
+                    <table id="tblUser" style="width: 100%">
+
+                    </table>
+
+                </div>
             </div>
         </div>
     </div>

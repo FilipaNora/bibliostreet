@@ -21,7 +21,9 @@
 
     <!--Custom JS-->
     <script src="js/main.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/utilizador.js"></script>
+
+
 
 </head>
 
@@ -42,28 +44,6 @@
                     <li class="active">
                         <a href="#">Livros</a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configurações
-                                <span class="caret"></span>
-                            </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="confbiblio.html">Bibliotecas</a>
-                            </li>
-                            <li>
-                                <a href="confcategorias.html">Categorias de livros</a>
-                            </li>
-                            <li>
-                                <a href="conftags.html">Tags de livros</a>
-                            </li>
-                            <li>
-                                <a href="confusers.html">Gestão de utilizadores</a>
-                            </li>
-                            <li>
-                                <a href="confoutras.html">Outras configurações</a>
-                            </li>
-                        </ul>
-                    </li>
                     <!--OPÇÃO LOGOUT-->
                     <li id="optLogout" class="nav-item">
                         <a class="nav-link" href="#">Logout</a>
@@ -74,35 +54,36 @@
     </nav>
 
     <div class="container text-center">
-        <div class="row content">
 
+        <!-- PRIMEIRA LINHA -->
+        <div class="row content">
             <div class="col-sm-12 text-left">
                 <h2>Livros</h2>
             </div>
-            <div class="col-sm-10 text-left">
+            <div class="col-sm-10 text-left" id="filtro">
                 <select id="fgenero">
+                    <option value=""></option>
                 </select>
                 <select id="fcodigo">
                 </select>
                 <br>
                 <br>
                 <button id="fbutFiltrar"> Filtrar </button>
-                <br><br>
+                <br>
+                <br>
             </div>
-
-            <div class="col-sm-2 text-left">
+            <div class="col-sm-2 text-left" id="ordem">
                 <select id="ordenar">
-                    <option value="">Ordenar</option>
-                    <option value="A-Z">A-Z</option>
+                    <option value="" >Ordenar</option>
+                    <option value="A-Z" id="az">A-Z</option>
                 </select>
                 <button id="fbutOrdenar">Ordenar</button>
             </div>
-            <br>
             <div class="col-sm-12 text-left">
                 <div id="listaLivros"></div>
             </div>
-
         </div>
+    </div>
 
 </body>
 
